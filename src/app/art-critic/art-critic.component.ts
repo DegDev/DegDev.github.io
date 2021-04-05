@@ -18,7 +18,7 @@ export class ArtCriticComponent implements OnInit {
 
   constructor() {     
     this.correctAnswer = 'пейзаж';
-    this.secondCorrectAnswer = 'iphone';
+    this.secondCorrectAnswer = 'айфон';
     this.isErorrMessage = false;
   }
 
