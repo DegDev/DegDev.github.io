@@ -1,0 +1,102 @@
+
+
+<div class="row">
+
+    <div class="col-sm-6">
+        <img src="assets/img/историк.png" class="img-thumbnail" alt="роль теоретик">
+    </div>
+
+    <div class="col-sm-6">
+        <h4 style="text-align:left;">Историк</h4>
+        <h5 class="text-center" style="color:blue;"> 1 этап </h5>
+        
+         
+        
+        <div>
+         
+            Рассмотрите временную шкалу <a href="https://www.timetoast.com/timelines/6248910a-e70f-4a32-b27c-e13ef9c355dc" target="_blank">  История развития компьютерной графики  </a> <br>
+         
+        </div>      
+        <div>
+            Как связаны между собой машина БЭСМ-4, мультфильм "Кошечка" и Н.Н.Константинов? (запишите в тетрадь)
+
+        </div>
+        
+        <div *ngIf="!isFirstAnswerGiven" class="mt-2" > 
+            
+            Решите подобную задачу. Введите правильный ответ задачи и получите доступ к следующему заданию. 
+
+            <div class="mt-2 alert-info">
+                Чтобы получить доступ к следующему заданию, запишите год создания компьютерной математической модели движения кошки.
+
+            </div>
+            
+            <div style = "min-height: 60px;" class="mt-2">
+                <div class="alert alert-danger fade show" role="alert" *ngIf="isErorrMessage">
+                    Ответ не верен                    
+                  </div>
+            </div>
+
+            <div class="form-inline">                
+                
+                <div class="form-group mx-sm-3 mb-2">                  
+                  <input type="text" class="form-control" id="inputPassword"  [(ngModel)]="answer" (keydown)="clearError()">
+                </div>
+
+                <button  class="btn btn-primary mb-2" (click)="check()" >Ответить</button>
+            </div>
+          </div>
+
+        
+    </div>
+
+</div>
+
+<div class="row mt-3" *ngIf="isFirstAnswerGiven">
+    <div class="col-sm-12">
+        
+        <h5  style="color:blue;"> 2 этап </h5>
+            <div>В каком году была получена первая в мире цифровая фотография и кто был на ней изображен? (запишите в тетрадь)</div>
+            
+            <div *ngIf="!isSecondAnswerGiven" class="mt-2" > 
+            
+                Решите подобную задачу. Введите правильный ответ задачи и получите доступ к следующему заданию. 
+    
+                <div class="mt-2 alert-info">
+                    Год рождения светового пера ?
+                </div>
+                
+                <div style = "min-height: 60px;" class="mt-2">
+                    <div class="alert alert-danger fade show" role="alert" *ngIf="isSecondErorrMessage">
+                        Ответ не верен                    
+                      </div>
+                </div>
+    
+                <div class="form-inline">                
+                    
+                    <div class="form-group mx-sm-3 mb-2">                  
+                      <input type="text" class="form-control" id="inputPassword"  [(ngModel)]="secondAnswer" (keydown)="clearError()">
+                    </div>
+    
+                    <button  class="btn btn-primary mb-2" (click)="secondCheck()" >Ответить</button>
+                </div>
+              </div>
+
+        
+
+    </div>
+    
+</div>
+
+<div class="row mt-3" *ngIf="isSecondAnswerGiven">
+    <div class="col-sm-12">
+    <h5  style="color:blue;"> 3 этап </h5>
+    <div>
+        Какое отношение имел дизайнер из “Боинга” к возникновению термина “компьютерная графика”? (запишите в тетрадь)
+    </div>
+    </div>
+</div>
+
+
+
+

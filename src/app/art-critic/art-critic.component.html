@@ -1,0 +1,97 @@
+
+<div class="row">
+
+    <div class="col-sm-6">
+        <img src="assets/img/художник2.jpeg" class="img-thumbnail" alt="роль теоретик">
+    </div>
+
+    <div class="col-sm-6">
+        <h4 style="text-align:left;">Искусствовед</h4>
+        <h5 class="text-center" style="color:blue;"> 1 этап </h5>
+        
+         
+        
+        <div>
+         
+            Что такое цифровая живопись и в каких жанрах она востребована? <a href="http://mediasvod.ru/tsifrovaya-zhivopis-primery-rabot-masterov-digital-painting-v-zhanre-kontsept-art/" target="_blank"> Ответ на этот вопрос можно найти по ссылке  </a> <br>
+         
+        </div>      
+        
+        
+        <div *ngIf="!isFirstAnswerGiven" class="mt-2" > 
+                       
+
+            <div class="mt-2 alert-info">
+                Введите название одной из техник цифровой живописи и получите доступ к следующему заданию. 
+            </div>
+            
+            <div style = "min-height: 60px;" class="mt-2">
+                <div class="alert alert-danger fade show" role="alert" *ngIf="isErorrMessage">
+                    Ответ не верен                    
+                  </div>
+            </div>
+
+            <div class="form-inline">                
+                
+                <div class="form-group mx-sm-3 mb-2">                  
+                  <input type="text" class="form-control" id="inputPassword"  [(ngModel)]="answer" (keydown)="clearError()">
+                </div>
+
+                <button  class="btn btn-primary mb-2" (click)="check()" >Ответить</button>
+            </div>
+          </div>
+
+        
+    </div>
+
+</div>
+
+<div class="row mt-3" *ngIf="isFirstAnswerGiven">
+    <div class="col-sm-12">
+        
+        <h5  style="color:blue;"> 2 этап </h5>
+            <div>Что подразумевает художник Юсуке Акамацу под термином "трансфигурация"? <a href="https://architime.ru/activity/2020/exhibition250320sovrhistory.htm" target="_blank"> Ответ на этот вопрос можно найти по ссылке  </a>
+            </div>
+            
+            <div *ngIf="!isSecondAnswerGiven" class="mt-2" >           
+
+    
+                <div class="mt-2 alert-info">
+                    Чтобы получить доступ к следующему заданию, ответьте на вопрос: 
+                    Что использует Юсуке Акамацу в качестве холста? 
+                </div>
+                
+                <div style = "min-height: 60px;" class="mt-2">
+                    <div class="alert alert-danger fade show" role="alert" *ngIf="isSecondErorrMessage">
+                        Ответ не верен                    
+                      </div>
+                </div>
+    
+                <div class="form-inline">                
+                    
+                    <div class="form-group mx-sm-3 mb-2">                  
+                      <input type="text" class="form-control" id="inputPassword"  [(ngModel)]="secondAnswer" (keydown)="clearError()">
+                    </div>
+    
+                    <button  class="btn btn-primary mb-2" (click)="secondCheck()" >Ответить</button>
+                </div>
+              </div>
+
+        
+
+    </div>
+    
+</div>
+
+<div class="row mt-3" *ngIf="isSecondAnswerGiven">
+    <div class="col-sm-12">
+    <h5  style="color:blue;"> 3 этап </h5>
+    <div>
+        Опишите кратко принцип работы художника Яньцзюнь Чэн. <a href="https://docs.google.com/document/d/1wsg2FO5w2SqeGSRfmxhaZV005WIfLl3fWlQOMpehGiI/edit?usp=sharing" target="_blank"> Ответ на этот вопрос можно найти по ссылке  </a>
+    </div>
+    </div>
+</div>
+
+
+
+

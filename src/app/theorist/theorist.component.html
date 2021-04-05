@@ -1,0 +1,103 @@
+
+
+<div class="row">
+
+    <div class="col-sm-6">
+        <img src="assets/img/theorist.png" class="img-thumbnail" alt="роль теоретик">
+    </div>
+
+    <div class="col-sm-6">
+        <h4 style="text-align:left;">Теоретик</h4>
+        <h5 class="text-center" style="color:blue;"> 1 этап </h5>
+        
+        <p class="text-left" style="margin-top:0px;">
+            1.Выяснить отличительные черты растровой и векторной графики.
+        </p>
+        
+        <p style="margin-left: 20px;">
+            а. Что собой представляет растровая графика?
+        </p>
+        
+        <p style="margin-left: 20px;">       
+            b. Что собой представляет растровая графика?
+        </p>
+
+        <p class="text-left" style="margin-top:0px;">
+            2. Достоинства и недостатки растровой и векторной графики.
+        </p>
+        
+        <div>
+            Ответы на эти вопросы можно найти по ссылкам:  <br>
+            <a href="https://www.youtube.com/watch?v=rFg8kfoN1X8" target="_blank">  Ссылка 1  </a> <br>
+            <a href="https://turbologo.ru/blog/rastr-i-vector/" target="_blank">  Ссылка 2   </a>
+        </div>      
+        <br>
+        
+        <div *ngIf="!isFirstAnswerGiven"> 
+            Чтобы получить доступ к следующему заданию, назовите минимальный элемент растровой графики: 
+            
+            <div style = "min-height: 60px;">
+                <div class="alert alert-danger fade show" role="alert" *ngIf="isErorrMessage">
+                    Ответ не верен                    
+                  </div>
+            </div>
+
+            <div class="form-inline">                
+                
+                <div class="form-group mx-sm-3 mb-2">                  
+                  <input type="text" class="form-control" id="inputPassword"  [(ngModel)]="answer" (keydown)="clearError()">
+                </div>
+
+                <button  class="btn btn-primary mb-2" (click)="check()" >Ответить</button>
+            </div>
+          </div>
+
+        
+    </div>
+
+</div>
+
+<div class="row mt-3" *ngIf="isFirstAnswerGiven">
+    <div class="col-sm-12">
+        <h5  style="color:blue;"> 2 этап </h5>
+        <div>Заполните таблицу “Применение компьютерной графики”.</div>
+        <table class="table table-bordered mt-2">
+            <thead>
+              <tr class="d-flex">
+                <th class="col-3" ></th>
+                <th class="col-3" >Растровая</th>
+                <th class="col-3" >Векторная</th>                
+                <th class="col-3" >Фрактальная</th>  
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="d-flex" >
+                <td  class="col-sm-3" style="font-weight: bold;">
+                    Применение компьютерной графики                    
+                    </td>
+                <td  class="col-sm-3"></td>
+                <td  class="col-sm-3"></td>
+                <td  class="col-sm-3"></td>
+             
+              </tr>
+              <tr  class="d-flex">
+                <td  class="col-sm-3" style="font-weight: bold;"> Что чаще используют при создании компьютерных образов компьютерной графики  </td>
+                <td  class="col-sm-3"></td>
+                <td  class="col-sm-3"></td>
+                <td  class="col-sm-3"></td>
+             
+              </tr>              
+            </tbody>
+          </table>
+    </div>
+
+    <div>
+        <a href="http://xn--c1ajtfjx.xn--p1ai/kompyuternaya-grafika-vidy-kompyuternoj-grafiki/#:~:text=%D0%A0%D0%B0%D0%B7%D0%BB%D0%B8%D1%87%D0%B0%D1%8E%D1%82%20%D1%87%D0%B5%D1%82%D1%8B%D1%80%D0%B5%20%D0%B2%D0%B8%D0%B4%D0%B0%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D0%BD%D0%BE%D0%B9%20%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B8,%D0%B8%D0%BB%D0%B8%20%D0%BF%D1%80%D0%B8%20%D0%BF%D0%B5%D1%87%D0%B0%D1%82%D0%B8%20%D0%BD%D0%B0%20%D0%B1%D1%83%D0%BC%D0%B0%D0%B3%D0%B5" target="_blank"> 
+        Для этого используйте материалы ссылки
+        </a>
+    </div>
+</div>
+
+
+
+
