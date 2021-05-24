@@ -11,6 +11,7 @@ export class ArtCriticComponent implements OnInit {
   secondAnswer!: string;
   correctAnswer: string;
   secondCorrectAnswer: string;
+  secondCorrectAnswer2: string;
   isErorrMessage: boolean;
   isSecondErorrMessage!: boolean;
   isFirstAnswerGiven!: boolean;
@@ -19,6 +20,7 @@ export class ArtCriticComponent implements OnInit {
   constructor() {     
     this.correctAnswer = 'пейзаж';
     this.secondCorrectAnswer = 'айфон';
+    this.secondCorrectAnswer2 = 'iphone';
     this.isErorrMessage = false;
   }
 
@@ -36,8 +38,8 @@ export class ArtCriticComponent implements OnInit {
     }
   }
 
-  secondCheck() {
-    if(this.secondAnswer.trim().toLowerCase() === this.secondCorrectAnswer) {
+  secondCheck() {    
+    if((this.secondAnswer.trim().toLowerCase() === this.secondCorrectAnswer) || (this.secondAnswer.trim().toLowerCase() === this.secondCorrectAnswer2)) {
       console.log('Ответ верен!');
       this.isSecondErorrMessage = false;
       this.isSecondAnswerGiven = true;
